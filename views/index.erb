@@ -1,0 +1,20 @@
+
+<h1><%= @user.name %></h1> 
+<table>
+	<tr>
+		<th>Activity</th>
+		<th>Start Time</th>
+		<th>Distance</th>
+		<th>Post</th>
+	</tr>
+	
+		
+<% @user.activities[1..10].each do |activity| %>   
+	<tr>
+		<td><%= activity.type.downcase %></td>
+		<td><%= activity.start_time %></td>
+		<td><%= activity.distance %> <%= @user.distance_unit %></td>
+		<td><a href="">Post to Daily Mile</a></td>
+<% end %>
+</table>
+
